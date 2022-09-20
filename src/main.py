@@ -36,14 +36,14 @@ def main():
     knn_classifier = KNeighborsClassifier(n_neighbors=3)
 
     classifiers = [
-        # gnb_classifier,
-        # qda_classifier,
-        # lda_classifier,
+        gnb_classifier,
+        qda_classifier,
+        lda_classifier,
         random_forest_classifier,
         knn_classifier
     ]
 
-    # train_classifiers(X, y, classifiers)
+    train_classifiers(X, y, classifiers)
     print("The following output will be for smote data")
     train_classifiers(X_balanced, y_balanced, classifiers)
 
