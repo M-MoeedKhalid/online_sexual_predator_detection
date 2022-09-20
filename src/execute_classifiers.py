@@ -4,7 +4,7 @@ from sklearn.model_selection import cross_val_predict
 
 from helpers import get_values
 from colorama import init
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 from datetime import datetime
 
 init()

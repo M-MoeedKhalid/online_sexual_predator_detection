@@ -1,15 +1,9 @@
-# Loading the libraries
 import pandas as pd
 import numpy as np
 import xml.etree.ElementTree as et
 import gensim
 from gensim.models.doc2vec import Doc2Vec
-from sklearn import model_selection
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis
-from sklearn.ensemble import RandomForestClassifier
 from imblearn.over_sampling import SMOTE
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neighbors import KNeighborsClassifier
 
 
 def get_pan_12_data():
