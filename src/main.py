@@ -1,3 +1,5 @@
+import os
+
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -6,6 +8,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from execute_classifiers import train_classifiers
 from loading_data import get_pan_12_data, get_balanced_data
 import numpy as np
+
+from src.rnn import train_rnn
+
+print(os.path.abspath("."))
 
 
 def main():
@@ -43,9 +49,11 @@ def main():
         knn_classifier
     ]
 
-    train_classifiers(X, y, classifiers)
-    print("The following output will be for smote data")
-    train_classifiers(X_balanced, y_balanced, classifiers)
+    # train_classifiers(X, y, classifiers)
+    train_rnn(X, y)
+    print("The follow ing output will be for smote data")
+    # train_classifiers(X_balanced, y_balanced, classifiers)
+    train_rnn(X_balanced, y_balanced)
 
 
 if __name__ == "__main__":
