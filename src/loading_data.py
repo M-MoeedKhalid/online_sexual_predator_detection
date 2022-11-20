@@ -1,12 +1,15 @@
+from time import time
+
 import pandas as pd
 import numpy as np
 import xml.etree.ElementTree as et
 import gensim
+from gensim.models import Word2Vec
 from gensim.models.doc2vec import Doc2Vec
 from imblearn.over_sampling import SMOTE
 
 
-def get_pan_12_data():
+def get_pan_12_data_doc2vec():
     etree = et.parse('../dataset/pan12.xml')
     xroot = etree.getroot()
     predators = []
